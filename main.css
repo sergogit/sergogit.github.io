@@ -1,0 +1,581 @@
+body {
+  color: #8c8c8c;
+  margin: 0;
+  padding: 0; }
+
+.Container {
+  width: 1200px;
+  margin: 0 auto; }
+
+.Flex {
+  display: flex; }
+
+.Grid {
+  display: grid; }
+
+.Button {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  background-color: #c7b299;
+  padding: 15px 45px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .1s ease; }
+  .Button::after {
+    transition: background-color .2s ease;
+    position: absolute;
+    content: '';
+    height: 4px;
+    bottom: 0;
+    width: 100%;
+    background-color: #3f3222;
+    opacity: .18;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    left: 0; }
+  .Button:focus, .Button:hover {
+    text-decoration: none;
+    color: #fff; }
+  .Button:hover {
+    background-color: #d0bea9; }
+    .Button:hover::after {
+      opacity: .22; }
+  .Button:active {
+    background-color: #bea689; }
+    .Button:active::after {
+      opacity: .32; }
+
+.Header {
+  height: 100vh;
+  position: relative; }
+  .Header .Container {
+    justify-content: center; }
+  .Header::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: rgba(17, 17, 17, 0.7);
+    opacity: .7; }
+  .Header-Button {
+    margin-top: 52px;
+    padding-right: 39px;
+    padding-left: 39px;
+    color: #ffffff;
+    font-family: "Raleway - Extra Bold";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 1px; }
+  .Header-TopLine {
+    margin-top: 40px;
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-start;
+    z-index: 1; }
+  .Header-Content {
+    max-width: 550px;
+    margin: 0 auto;
+    position: absolute;
+    align-self: center;
+    text-align: center; }
+    .Header-Content h1 {
+      white-space: nowrap;
+      margin: 0;
+      color: #ffffff;
+      font-family: "Raleway - Extra Bold";
+      font-size: 52px;
+      font-weight: 400; }
+    .Header-Content h2 {
+      white-space: nowrap;
+      margin: 0;
+      color: #ffffff;
+      font-family: Raleway;
+      font-size: 36px;
+      font-weight: 500; }
+    .Header-Content p {
+      margin: 0;
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px; }
+
+.Logo {
+  display: flex;
+  align-items: center; }
+  .Logo-Text {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-family: Raleway;
+    font-size: 34px;
+    font-weight: 400; }
+
+.Menu {
+  display: flex; }
+  .Menu-Item {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    transition: color .25s ease;
+    padding: 15px; }
+    .Menu-Item_active {
+      color: #c7b299; }
+    .Menu-Item:hover {
+      color: #c7b299; }
+
+.Section_min .Container {
+  padding-top: 80px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 34px; }
+
+.Item {
+  position: relative;
+  text-align: center; }
+  .Item-Icon {
+    font-size: 44px;
+    color: #555555;
+    transition: color .25s ease; }
+  .Item-Title {
+    color: #555555;
+    font-family: "Raleway - Semi Bold";
+    font-size: 22px;
+    font-weight: 400;
+    transition: color .25s ease; }
+    .Item-Title h3 {
+      margin: 0;
+      margin-top: 29px; }
+  .Item-Text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px; }
+  .Item::after {
+    margin-left: -35px;
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 70px;
+    background-color: #f1eee9;
+    transition: background-color .25s ease; }
+  .Item:hover .Item-Icon, .Item:hover .Item-Title {
+    color: #c7b299; }
+  .Item:hover::after {
+    background-color: #c7b299; }
+
+.YouIdeas {
+  margin-top: 80px;
+  background-color: #fbfaf8; }
+  .YouIdeas-Header {
+    width: 770px;
+    margin: 0 auto;
+    padding-top: 83px;
+    text-align: center; }
+    .YouIdeas-Header h1 {
+      color: #555555;
+      font-family: "Raleway - Semi Bold";
+      font-size: 30px;
+      font-weight: 400; }
+    .YouIdeas-Header p {
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 28px; }
+  .YouIdeas-Carousel {
+    position: relative;
+    justify-content: center; }
+    .YouIdeas-Carousel .car_img_1 {
+      z-index: 1000; }
+    .YouIdeas-Carousel .car_img_2 {
+      margin-top: -400px;
+      margin-left: -230px; }
+    .YouIdeas-Carousel .car_img_3 {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+
+.Info {
+  background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%); }
+  .Info .Container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 50px;
+    padding-bottom: 50px; }
+  .Info-Content {
+    justify-self: start;
+    align-self: center; }
+  .Info-Title {
+    color: #fff; }
+    .Info-Title h1 {
+      margin: 0;
+      font-family: Raleway;
+      font-size: 28px;
+      font-weight: 400; }
+    .Info-Title span {
+      color: #c7b299; }
+  .Info-Text p {
+    color: #615855;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0; }
+  .Info-Button {
+    justify-self: end;
+    align-self: center; }
+    .Info-Button .Button {
+      letter-spacing: 1px;
+      padding: 20px 28px; }
+
+.GalleryProject {
+  padding-top: 81px;
+  padding-bottom: 80px;
+  text-align: center; }
+  .GalleryProject-Title {
+    color: #555555; }
+    .GalleryProject-Title h1 {
+      margin: 0;
+      font-family: "Raleway - Semi Bold";
+      font-size: 30px;
+      font-weight: 400; }
+  .GalleryProject-Text p {
+    margin: 0;
+    margin-top: 24px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px; }
+  .GalleryProject-Nav {
+    margin-top: 40px;
+    margin-bottom: 40px; }
+  .GalleryProject-Projects {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px; }
+  .GalleryProject-Button .Button {
+    padding: 20px 45px;
+    letter-spacing: 1px; }
+
+.ProjectItem {
+  position: relative; }
+  .ProjectItem-Img {
+    position: relative; }
+    .ProjectItem-Img::before {
+      transition: .25s ease;
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: #000;
+      opacity: 0;
+      margin-left: -50%; }
+    .ProjectItem-Img img {
+      display: block; }
+  .ProjectItem-Content {
+    transition: .25s ease;
+    background-color: #fbfaf8;
+    padding: 30px;
+    text-align: left; }
+  .ProjectItem-Title h1 {
+    transition: .25s ease;
+    margin: 0;
+    color: #c7b299;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500; }
+  .ProjectItem-Text p {
+    transition: .25s ease;
+    margin: 0;
+    color: #d1d1d1;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px; }
+  .ProjectItem:hover .ProjectItem-Img::before {
+    opacity: 0.7; }
+  .ProjectItem:hover .ProjectItem-Content {
+    background-color: #362f2d; }
+  .ProjectItem:hover .ProjectItem-Title h1 {
+    color: #fff; }
+  .ProjectItem:hover .ProjectItem-Text p {
+    color: #c7b299; }
+
+.ProjectNav {
+  justify-content: center; }
+  .ProjectNav-Item {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: 1px solid #ebebeb;
+    transition: background-color .25s ease; }
+    .ProjectNav-Item:hover {
+      background-color: #998675;
+      color: #fff; }
+    .ProjectNav-Item_Active {
+      background-color: #998675;
+      color: #fff; }
+
+.Video {
+  position: relative;
+  justify-content: center;
+  height: 705px; }
+  .Video::before {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%; }
+  .Video-Content {
+    align-self: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 10; }
+  .Video-Title h1 {
+    margin: 0;
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 500; }
+  .Video-Text p {
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px; }
+  .Video-TimeLine {
+    color: #c7b299;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; }
+
+.Mobile .Container {
+  padding-top: 80px; }
+
+.Mobile-Img img {
+  display: block; }
+
+.Mobile-Content {
+  align-self: center; }
+
+.Mobile-Title h1 {
+  margin: 0;
+  color: #555555;
+  font-family: "Raleway - Semi Bold";
+  font-size: 30px;
+  font-weight: 400; }
+
+.Mobile-Text p {
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px; }
+
+.Mobile-List ul {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 300;
+  list-style-type: none; }
+  .Mobile-List ul li {
+    padding-top: 12px; }
+
+.Counters {
+  padding-top: 69px;
+  padding-bottom: 92px;
+  background-color: #f4f5f8;
+  background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%); }
+  .Counters .Container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 70px;
+    text-align: center;
+    justify-items: center; }
+
+.Counter {
+  position: relative; }
+  .Counter::after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    margin-left: -15px;
+    margin-top: 30px; }
+  .Counter-Icon {
+    font-size: 44px;
+    color: #c7b299; }
+  .Counter-Count h1 {
+    margin-top: 30px;
+    margin-bottom: 21px;
+    color: #fff;
+    font-family: "Montserrat - Ultra Light";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 36px; }
+  .Counter-Title h3 {
+    margin: 0;
+    color: #c7b299;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    text-transform: uppercase; }
+
+.RecentPosts {
+  padding-top: 80px; }
+  .RecentPosts-Posts {
+    padding: 0 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px; }
+  .RecentPosts-Header {
+    margin-bottom: 40px;
+    text-align: center; }
+  .RecentPosts-Title h1 {
+    margin: 0;
+    color: #555555;
+    font-family: "Raleway - Semi Bold";
+    font-size: 30px;
+    font-weight: 400; }
+  .RecentPosts-Text p {
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px; }
+
+.RecentPost {
+  position: relative; }
+  .RecentPost-Img {
+    position: relative; }
+    .RecentPost-Img::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #000;
+      opacity: 0;
+      transition: .25s ease; }
+    .RecentPost-Img img {
+      display: block; }
+  .RecentPost-Date {
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    top: 20px;
+    left: 20px; }
+  .RecentPost-Day {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 20px;
+    border-radius: 3px 3px 0 0;
+    padding: 10px;
+    background-color: #363636;
+    transition: .25s ease; }
+  .RecentPost-Month {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: 0 0 3px 3px;
+    padding: 6px 10px;
+    background-color: #252525;
+    transition: .25s ease; }
+  .RecentPost-Title h2 {
+    margin: 0;
+    color: #555555;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
+    transition: .25s ease; }
+  .RecentPost-Content {
+    padding: 30px; }
+  .RecentPost-Text {
+    margin-top: 19px; }
+    .RecentPost-Text p {
+      margin: 0;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      transition: .25s ease; }
+  .RecentPost-ReadMore {
+    margin-top: 27px; }
+    .RecentPost-ReadMore a {
+      text-decoration: none;
+      color: #c7b299; }
+  .RecentPost:hover .RecentPost-Img::before {
+    opacity: 0.7; }
+  .RecentPost:hover .RecentPost-Day {
+    background-color: #c7b299; }
+  .RecentPost:hover .RecentPost-Month {
+    background-color: #a48d72; }
+  .RecentPost:hover .RecentPost-Title h2 {
+    color: #c7b299; }
+  .RecentPost:hover .RecentPost-Text p {
+    color: #fff; }
+  .RecentPost:hover .RecentPost-Content {
+    background-color: #362f2d; }
+
+.Partners {
+  position: relative; }
+  .Partners::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.7; }
+  .Partners .Container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 90px;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 140px; }
+  .Partners-Partner {
+    z-index: 1000; }
+    .Partners-Partner img {
+      display: block; }
+
+.Footer {
+  padding: 45px 0;
+  background-color: #111111; }
+  .Footer .Container {
+    justify-content: space-between; }
+  .Footer-Copy div {
+    cursor: pointer;
+    border-right: 1px #555555 solid;
+    padding: 0 10px;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px; }
+    .Footer-Copy div span {
+      color: #fff; }
+    .Footer-Copy div:last-child {
+      border: 0; }
+  .Footer-Info div {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    cursor: pointer;
+    border-right: 1px #555555 solid;
+    padding: 0 10px; }
+    .Footer-Info div span {
+      color: #fff; }
+    .Footer-Info div:last-child {
+      border: 0; }
